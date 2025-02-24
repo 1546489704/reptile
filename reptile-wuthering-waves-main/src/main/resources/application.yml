@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: Reptile-Wuthering-Waves
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/reptile?serverTimezone=Asia/Shanghai&useUnicode=true&useSSL=true
+    username: root
+    password: admin123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8080
+  servlet:
+    context-path: /pac
+
+dingdingurl: 'https://oapi.dingtalk.com/robot/send?access_token=14a207f9552a699bd62bf333c1de54f9a09bc4626132b5d69a37ff7ac108cfe1'
+
+http:
+  proxy:
+    phost: your.proxy.host
+    pport: 8080
+    jhost: your.proxy.host
+    jport: 8080
